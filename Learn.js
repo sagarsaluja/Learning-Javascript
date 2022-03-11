@@ -61,4 +61,30 @@ try {
   console.log("can't re assign const");
 }
 
+//object properties can be changed even if declared with const
+const person = { name: "Sagar", Age: 23 };
+console.log(person);
+person.Age = 22;
+console.log(person);
+
+try {
+  person = "dog";
+} catch (error) {
+  console.log("can't re assign something that is declared using const");
+}
+//re assignment of object declared with let
+let animal = { name: "cat", color: "white" };
+console.log(animal);
+animal = "dog";
+console.log(animal);
+
+animal = person;
+console.log(animal);
+
+try {
+  person = animal;
+} catch (error) {
+  console.log("can't assign person as it is a const");
+}
 //THINK ABOUT -> SCOPE, RE Declaration , Re Assignment when working with variables
+//Use Const , if not const then let , if not the use var for most of  the cases
