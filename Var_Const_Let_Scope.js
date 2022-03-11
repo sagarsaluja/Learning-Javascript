@@ -5,6 +5,7 @@
 let r = 1;
 const x = 2;
 var y = 3;
+//here the LHS is "DECLARATION of the variable" and the RHS is "defining the variable"
 console.log(r, x, y);
 //works because r and x have block scope
 //y is declared outside of a function , so it has global scope
@@ -14,6 +15,7 @@ function A() {
   const c = 5;
   var d = 6;
   console.log(r, x, y); //works
+  //these variablles have function scope
 }
 
 A();
@@ -35,7 +37,18 @@ try {
 //let can't be re declared , but var can be re-declared
 //so avoid using var
 //use let and const
+{
+  var x1 = 500;
+  let y1 = 55;
+  const z1 = 555;
+}
 
+console.log(x1);
+try {
+  console.log(y1, z1);
+} catch (error) {
+  console.log("x1 and z1 have block scope declared under { }");
+}
 //var can be used before declaring it
 console.log(VarVariable);
 var VarVariable = 4;
@@ -88,3 +101,16 @@ try {
 }
 //THINK ABOUT -> SCOPE, RE Declaration , Re Assignment when working with variables
 //Use Const , if not const then let , if not the use var for most of  the cases
+
+//the thing with "CATCH"
+
+try {
+  throw new Error();
+} catch (error) {
+  console.log(error);
+  var check = "does this work";
+}
+console.log(check);
+//catch has its own scope
+//even when declared inside the catch function , var treats it as a block and not a function
+//and is available outside
