@@ -27,3 +27,12 @@ console.log(this.myAge); //prints undefined!
 //with let and const , the variables don't get added to the global object.
 //Also , global scope and global object are not same!
 //this myAge is available globally  , but not as part of the global object
+
+//exercise : what's the output ?
+function test() {
+  var A = 4;
+  console.log(this.A, "prints?", A);
+}
+test();
+//the A has function scope.
+//printing A works , but this.A prints undefined.

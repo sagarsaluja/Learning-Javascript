@@ -47,7 +47,7 @@ console.log(x1);
 try {
   console.log(y1, z1);
 } catch (error) {
-  console.log("x1 and z1 have block scope declared under { }");
+  console.log("y1 and z1 have block scope declared under { }");
 }
 //var can be used before declaring it
 console.log(VarVariable);
