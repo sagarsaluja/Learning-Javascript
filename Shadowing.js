@@ -8,4 +8,5 @@ function printAge() {
   var myAge = 35;
   console.log(myAge);
 }
+console.log(myAge);
 printAge();
