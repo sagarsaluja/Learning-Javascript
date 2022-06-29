@@ -1,4 +1,8 @@
 //Theory
+//We want to execute some code "eventually"
+//when a button is clicked / when a timer compeletes
+
+//think of call backs here.
 
 doSomething();
 //direction execution , ends on parenthesis
