@@ -41,17 +41,19 @@ function updateTimer() {
   timer.textContent = remainingTime / 1000;
 }
 function defuse(message) {
-  clearInterval(bombTimer);
-  alert(message);
+  if (remainingTime > 0) {
+    clearInterval(bombTimer);
+    alert(message);
+  }
 }
 function TimeHandler() {
+  updateTimer();
   remainingTime = remainingTime - 1000;
-  if (remainingTime <= 0) {
+  if (remainingTime < 0) {
     alert("lost");
     clearInterval(bombTimer);
     return;
   }
-  updateTimer();
 }
 function init() {
   //setInterval takes in 2 arguments
