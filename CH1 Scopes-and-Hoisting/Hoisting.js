@@ -38,7 +38,7 @@ var greet = function () {
 };
 greet(); //this line prints hi ,
 //because , now the definition is also executed , and greet is a function
-
+console.log("this will print greet as a function now", greet);
 //hoisting inside functions
 function x() {
   console.log(myAge); //prints undefined
