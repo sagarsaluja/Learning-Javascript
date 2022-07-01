@@ -62,7 +62,8 @@ const nest_copy = [...nest];
 //map is a function which calls a function on each element in the array
 //it accepts the element on which it is being executed at the moment as a parameter.
 //map gives you an array .
-const v = user.map((usr) => {
+const abc = [{ name: "sagar" }, { name: "sameer" }];
+const v = abc.map((usr) => {
   return { ...usr }; // copy of the keyy value pair for the current element
 });
 //if you still have more nested elements , you will need other libraries to create a true copy.
