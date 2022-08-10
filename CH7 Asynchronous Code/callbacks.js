@@ -1,6 +1,6 @@
 //Eg: setTimeout ,addEventListener etc.
 //Callback functions are functions passed as a parameter to another function, which should be executed eventually.
-
+//remember "eventually be executed"
 Operate(1, 2, function (res) {
   console.log(res);
 });
